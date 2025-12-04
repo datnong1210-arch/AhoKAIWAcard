@@ -44,7 +44,7 @@ foreach ( $course_posts as $post_id ) {
 
 // Drop the progress table
 $table_name = $wpdb->prefix . 'nihongo_flashcard_progress';
-$wpdb->query( $wpdb->prepare( 'DROP TABLE IF EXISTS %i', $table_name ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+$wpdb->query( "DROP TABLE IF EXISTS `{$table_name}`" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery,WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
 // Delete options
 delete_option( 'nihongo_flashcard_version' );
