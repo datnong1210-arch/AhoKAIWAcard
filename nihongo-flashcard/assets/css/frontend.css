@@ -1,0 +1,620 @@
+/**
+ * Nihongo Flashcard - Frontend Styles
+ *
+ * Japanese-style modern design for flashcard learning
+ */
+
+/* CSS Variables - Japanese color palette */
+:root {
+    --nihongo-primary: #c0392b;
+    --nihongo-primary-dark: #a93226;
+    --nihongo-secondary: #2c3e50;
+    --nihongo-accent: #e74c3c;
+    --nihongo-success: #27ae60;
+    --nihongo-warning: #f39c12;
+    --nihongo-white: #ffffff;
+    --nihongo-light: #f8f9fa;
+    --nihongo-gray: #95a5a6;
+    --nihongo-dark: #2c3e50;
+    --nihongo-border: #ecf0f1;
+    --nihongo-shadow: rgba(0, 0, 0, 0.1);
+    --nihongo-card-bg: #ffffff;
+    --nihongo-font-jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+    --nihongo-font-vn: "Inter", "Segoe UI", sans-serif;
+    --nihongo-radius: 16px;
+    --nihongo-radius-sm: 8px;
+    --nihongo-transition: all 0.3s ease;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --nihongo-card-bg: #1e2530;
+        --nihongo-light: #2c3e50;
+        --nihongo-dark: #ecf0f1;
+        --nihongo-border: #34495e;
+        --nihongo-shadow: rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Container */
+.nihongo-flashcard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: var(--nihongo-font-vn);
+}
+
+/* Error messages */
+.nihongo-error {
+    background: #fee;
+    border-left: 4px solid var(--nihongo-accent);
+    padding: 15px 20px;
+    border-radius: var(--nihongo-radius-sm);
+    color: var(--nihongo-accent);
+    margin-bottom: 20px;
+}
+
+/* Deck Title */
+.nihongo-deck-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--nihongo-dark);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.nihongo-deck-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--nihongo-primary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Flashcard */
+.nihongo-flashcard-wrapper {
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.nihongo-flashcard {
+    background: var(--nihongo-card-bg);
+    border-radius: var(--nihongo-radius);
+    box-shadow: 0 10px 40px var(--nihongo-shadow);
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: var(--nihongo-transition);
+    transform-style: preserve-3d;
+}
+
+.nihongo-flashcard:hover {
+    box-shadow: 0 15px 50px var(--nihongo-shadow);
+}
+
+/* Card Top Section - Japanese text */
+.nihongo-card-top {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, var(--nihongo-card-bg) 0%, var(--nihongo-light) 100%);
+    text-align: center;
+    position: relative;
+}
+
+.nihongo-card-top::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: var(--nihongo-primary);
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+.nihongo-card-japanese {
+    font-family: var(--nihongo-font-jp);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--nihongo-dark);
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+/* Divider line */
+.nihongo-card-divider {
+    height: 3px;
+    background: linear-gradient(90deg, var(--nihongo-primary) 0%, var(--nihongo-accent) 100%);
+    position: relative;
+}
+
+.nihongo-card-divider::before {
+    content: '◆';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--nihongo-card-bg);
+    padding: 0 10px;
+    color: var(--nihongo-primary);
+    font-size: 14px;
+}
+
+/* Card Bottom Section - Vietnamese/meaning */
+.nihongo-card-bottom {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    background: var(--nihongo-card-bg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.nihongo-card-bottom.visible {
+    opacity: 1;
+}
+
+.nihongo-card-meaning {
+    font-family: var(--nihongo-font-vn);
+    font-size: 1.25rem;
+    color: var(--nihongo-secondary);
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+/* Card flip hint */
+.nihongo-flip-hint {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 0.75rem;
+    color: var(--nihongo-gray);
+    opacity: 0.6;
+    transition: var(--nihongo-transition);
+}
+
+.nihongo-card-bottom.visible + .nihongo-flip-hint {
+    opacity: 0;
+}
+
+/* Controls */
+.nihongo-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.nihongo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--nihongo-card-bg);
+    color: var(--nihongo-secondary);
+    cursor: pointer;
+    transition: var(--nihongo-transition);
+    box-shadow: 0 4px 15px var(--nihongo-shadow);
+    font-size: 1.25rem;
+}
+
+.nihongo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--nihongo-shadow);
+}
+
+.nihongo-btn:active {
+    transform: translateY(0);
+}
+
+.nihongo-btn.active {
+    background: var(--nihongo-primary);
+    color: var(--nihongo-white);
+}
+
+.nihongo-btn.nihongo-btn-primary {
+    width: 60px;
+    height: 60px;
+    background: var(--nihongo-primary);
+    color: var(--nihongo-white);
+    font-size: 1.5rem;
+}
+
+.nihongo-btn.nihongo-btn-primary:hover {
+    background: var(--nihongo-primary-dark);
+}
+
+.nihongo-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.nihongo-btn-primary svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Progress */
+.nihongo-progress-wrapper {
+    margin-bottom: 20px;
+}
+
+.nihongo-progress-bar {
+    height: 8px;
+    background: var(--nihongo-border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.nihongo-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--nihongo-primary) 0%, var(--nihongo-accent) 100%);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.nihongo-progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.875rem;
+    color: var(--nihongo-gray);
+}
+
+.nihongo-progress-count {
+    font-weight: 600;
+    color: var(--nihongo-dark);
+}
+
+/* Card animation */
+.nihongo-flashcard.slide-left {
+    animation: slideLeft 0.3s ease;
+}
+
+.nihongo-flashcard.slide-right {
+    animation: slideRight 0.3s ease;
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(0); opacity: 1; }
+    50% { transform: translateX(-30px); opacity: 0; }
+    51% { transform: translateX(30px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+    0% { transform: translateX(0); opacity: 1; }
+    50% { transform: translateX(30px); opacity: 0; }
+    51% { transform: translateX(-30px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Shuffle animation */
+.nihongo-flashcard.shuffling {
+    animation: shuffle 0.5s ease;
+}
+
+@keyframes shuffle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+/* Toast notification */
+.nihongo-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--nihongo-dark);
+    color: var(--nihongo-white);
+    padding: 12px 24px;
+    border-radius: var(--nihongo-radius);
+    font-size: 0.875rem;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nihongo-toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* Course Grid */
+.nihongo-course-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nihongo-course-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nihongo-course-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--nihongo-dark);
+    margin-bottom: 10px;
+}
+
+.nihongo-course-description {
+    color: var(--nihongo-gray);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.nihongo-course-progress {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.nihongo-course-progress-text {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--nihongo-dark);
+}
+
+/* Deck Grid */
+.nihongo-deck-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.nihongo-deck-card {
+    background: var(--nihongo-card-bg);
+    border-radius: var(--nihongo-radius);
+    box-shadow: 0 4px 20px var(--nihongo-shadow);
+    overflow: hidden;
+    transition: var(--nihongo-transition);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.nihongo-deck-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px var(--nihongo-shadow);
+}
+
+.nihongo-deck-thumbnail {
+    height: 150px;
+    background: linear-gradient(135deg, var(--nihongo-primary) 0%, var(--nihongo-accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nihongo-deck-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nihongo-deck-thumbnail-placeholder {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.nihongo-deck-thumbnail-placeholder svg {
+    width: 64px;
+    height: 64px;
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.nihongo-deck-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--nihongo-success);
+    color: var(--nihongo-white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.nihongo-deck-status.in-progress {
+    background: var(--nihongo-warning);
+}
+
+.nihongo-deck-status.not-started {
+    background: var(--nihongo-gray);
+}
+
+.nihongo-deck-content {
+    padding: 20px;
+}
+
+.nihongo-deck-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--nihongo-dark);
+    margin-bottom: 8px;
+}
+
+.nihongo-deck-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.875rem;
+    color: var(--nihongo-gray);
+    margin-bottom: 15px;
+}
+
+.nihongo-deck-meta svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    margin-right: 4px;
+}
+
+.nihongo-deck-progress-bar {
+    height: 6px;
+    background: var(--nihongo-border);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.nihongo-deck-progress-fill {
+    height: 100%;
+    background: var(--nihongo-success);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nihongo-flashcard-container {
+        padding: 15px;
+    }
+
+    .nihongo-card-japanese {
+        font-size: 2rem;
+    }
+
+    .nihongo-card-meaning {
+        font-size: 1rem;
+    }
+
+    .nihongo-card-top {
+        padding: 30px 20px;
+    }
+
+    .nihongo-card-bottom {
+        padding: 20px;
+    }
+
+    .nihongo-flashcard {
+        min-height: 300px;
+    }
+
+    .nihongo-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+
+    .nihongo-btn.nihongo-btn-primary {
+        width: 52px;
+        height: 52px;
+        font-size: 1.25rem;
+    }
+
+    .nihongo-deck-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Touch-friendly */
+@media (hover: none) {
+    .nihongo-btn:hover {
+        transform: none;
+    }
+
+    .nihongo-deck-card:hover {
+        transform: none;
+    }
+}
+
+/* Swipe indicator */
+.nihongo-swipe-indicator {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--nihongo-gray);
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+@media (min-width: 769px) {
+    .nihongo-swipe-indicator {
+        display: none;
+    }
+}
+
+/* Mark learned button */
+.nihongo-mark-learned {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.nihongo-mark-learned-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--nihongo-light);
+    border: 2px solid var(--nihongo-border);
+    border-radius: var(--nihongo-radius);
+    color: var(--nihongo-gray);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--nihongo-transition);
+}
+
+.nihongo-mark-learned-btn:hover {
+    border-color: var(--nihongo-success);
+    color: var(--nihongo-success);
+}
+
+.nihongo-mark-learned-btn.learned {
+    background: var(--nihongo-success);
+    border-color: var(--nihongo-success);
+    color: var(--nihongo-white);
+}
+
+.nihongo-mark-learned-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* Keyboard shortcuts hint */
+.nihongo-shortcuts-hint {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: var(--nihongo-gray);
+}
+
+.nihongo-shortcuts-hint kbd {
+    display: inline-block;
+    padding: 2px 6px;
+    background: var(--nihongo-light);
+    border: 1px solid var(--nihongo-border);
+    border-radius: 4px;
+    font-family: monospace;
+    margin: 0 2px;
+}
+
+@media (max-width: 768px) {
+    .nihongo-shortcuts-hint {
+        display: none;
+    }
+}
