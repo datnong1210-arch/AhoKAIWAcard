@@ -1,0 +1,476 @@
+# Copyright (C) 2024 AhoKAIWA
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Nihongo Flashcard 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/datnong1210-arch/AhoKAIWAcard/issues\n"
+"POT-Creation-Date: 2024-01-01T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: nihongo-flashcard.php
+msgid "Thẻ"
+msgstr ""
+
+#: nihongo-flashcard.php
+msgid "của"
+msgstr ""
+
+#: nihongo-flashcard.php
+msgid "Đã xáo trộn!"
+msgstr ""
+
+#: nihongo-flashcard.php
+msgid "Hoàn thành!"
+msgstr ""
+
+#: nihongo-flashcard.php
+msgid "Đang tải..."
+msgstr ""
+
+#: nihongo-flashcard.php
+msgid "Có lỗi xảy ra"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgctxt "Post type general name"
+msgid "Bộ thẻ"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgctxt "Post type singular name"
+msgid "Bộ thẻ"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgid "Thêm mới"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgid "Thêm bộ thẻ mới"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgid "Bộ thẻ mới"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgid "Sửa bộ thẻ"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgid "Xem bộ thẻ"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgid "Tất cả bộ thẻ"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgid "Tìm kiếm bộ thẻ"
+msgstr ""
+
+#: includes/class-flashcard-post-type.php
+msgid "Không tìm thấy bộ thẻ nào."
+msgstr ""
+
+#: includes/class-course-post-type.php
+msgctxt "Post type general name"
+msgid "Khóa học"
+msgstr ""
+
+#: includes/class-course-post-type.php
+msgctxt "Post type singular name"
+msgid "Khóa học"
+msgstr ""
+
+#: includes/class-course-post-type.php
+msgid "Thêm khóa học mới"
+msgstr ""
+
+#: includes/class-course-post-type.php
+msgid "Khóa học mới"
+msgstr ""
+
+#: includes/class-course-post-type.php
+msgid "Sửa khóa học"
+msgstr ""
+
+#: includes/class-course-post-type.php
+msgid "Xem khóa học"
+msgstr ""
+
+#: includes/class-course-post-type.php
+msgid "Tất cả khóa học"
+msgstr ""
+
+#: includes/class-course-post-type.php
+msgid "Tìm kiếm khóa học"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Nihongo Flashcard"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Bảng điều khiển"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Nhập/Xuất CSV"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Hướng dẫn"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Hành động nhanh"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Tạo bộ thẻ mới"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Tạo khóa học mới"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Cách sử dụng Shortcode"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Hiển thị bộ thẻ với ID là X"
+msgstr ""
+
+#: admin/class-admin-menu.php
+msgid "Hiển thị khóa học với ID là X (grid các bộ thẻ)"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Audio bộ thẻ"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Danh sách thẻ"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Shortcode"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "URL Audio (MP3, WAV):"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Tải lên audio"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Nghe thử"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Thêm thẻ mới"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Phần trên (Tiếng Nhật):"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Phần dưới (Nghĩa, phiên âm, ví dụ):"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Audio riêng (tùy chọn):"
+msgstr ""
+
+#: admin/class-deck-metabox.php
+msgid "Xóa thẻ"
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Các bộ thẻ trong khóa học"
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Thống kê"
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Chọn các bộ thẻ để thêm vào khóa học. Kéo thả để sắp xếp thứ tự."
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Bộ thẻ có sẵn"
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Bộ thẻ đã chọn"
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Thêm vào khóa học"
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Xóa khỏi khóa học"
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Số bộ thẻ:"
+msgstr ""
+
+#: admin/class-course-metabox.php
+msgid "Tổng số thẻ:"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Nhấn để lật thẻ"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Thẻ trước (←)"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Thẻ sau (→)"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Xáo trộn (S)"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Lật thẻ (Space)"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Đánh dấu đã học"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Vuốt để chuyển thẻ"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Trước"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Sau"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Lật"
+msgstr ""
+
+#: templates/flashcard-display.php
+msgid "Xáo"
+msgstr ""
+
+#: templates/course-display.php
+msgid "Chưa học"
+msgstr ""
+
+#: templates/course-display.php
+msgid "Hoàn thành"
+msgstr ""
+
+#: templates/course-display.php
+msgid "Đang học"
+msgstr ""
+
+#: templates/course-display.php
+#. translators: %d: number of cards
+msgid "%d thẻ"
+msgstr ""
+
+#: templates/course-display.php
+#. translators: %d: number of learned cards
+msgid "%d đã học"
+msgstr ""
+
+#: includes/class-csv-handler.php
+msgid "Xác thực bảo mật thất bại."
+msgstr ""
+
+#: includes/class-csv-handler.php
+msgid "Bạn không có quyền thực hiện hành động này."
+msgstr ""
+
+#: includes/class-csv-handler.php
+msgid "ID bộ thẻ không hợp lệ."
+msgstr ""
+
+#: includes/class-csv-handler.php
+msgid "Bộ thẻ không tồn tại."
+msgstr ""
+
+#: includes/class-csv-handler.php
+msgid "Bộ thẻ nhập từ CSV"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Vui lòng chọn file CSV để tải lên."
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "File không hợp lệ. Vui lòng chọn file CSV."
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "File CSV rỗng hoặc không có dữ liệu hợp lệ."
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Không thể tạo bộ thẻ mới."
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Chế độ nhập không hợp lệ."
+msgstr ""
+
+#: admin/views/import-export.php
+#. translators: %d: number of cards imported
+msgid "Đã nhập thành công %d thẻ!"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Nhập từ CSV"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Chọn file CSV"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Chế độ nhập"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Tạo bộ thẻ mới"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Thêm vào bộ thẻ có sẵn"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Thay thế bộ thẻ có sẵn"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Tên bộ thẻ mới"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Chọn bộ thẻ"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Nhập CSV"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Xuất ra CSV"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Chưa có bộ thẻ nào để xuất."
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Xuất CSV"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Tải file CSV mẫu"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Tải file mẫu"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Cấu trúc file CSV"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Phần trên thẻ (từ vựng tiếng Nhật)"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "Phần dưới thẻ (nghĩa, phiên âm, ví dụ)"
+msgstr ""
+
+#: admin/views/import-export.php
+msgid "URL file audio (không bắt buộc)"
+msgstr ""
+
+#: includes/class-shortcodes.php
+msgid "Vui lòng cung cấp ID bộ thẻ."
+msgstr ""
+
+#: includes/class-shortcodes.php
+msgid "Bộ thẻ chưa có thẻ nào."
+msgstr ""
+
+#: includes/class-shortcodes.php
+msgid "Vui lòng cung cấp ID khóa học."
+msgstr ""
+
+#: includes/class-shortcodes.php
+msgid "Khóa học không tồn tại."
+msgstr ""
+
+#: includes/class-shortcodes.php
+msgid "Khóa học chưa có bộ thẻ nào."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Xác thực thất bại."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Dữ liệu không hợp lệ."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Đã lưu tiến độ."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Lỗi khi lưu tiến độ."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Tiến độ được lưu tạm thời. Đăng nhập để lưu vĩnh viễn."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Đã lưu thành công!"
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Lỗi khi lưu."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Thẻ không tồn tại."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Đã xóa thẻ."
+msgstr ""
+
+#: includes/class-ajax-handler.php
+msgid "Đã sắp xếp lại."
+msgstr ""
